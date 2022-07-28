@@ -1,7 +1,8 @@
 const MAX_LIFE = 100
+const myrange = 1
 
 class Fighter {
-  constructor(name, strength, dexterity, image, x, y) {
+  constructor(name, strength, dexterity, image, x, y,range) {
     this.name = name;
     this.strength = strength;
     this.dexterity = dexterity;
@@ -9,6 +10,7 @@ class Fighter {
     this.image = image;
     this.x = x;
     this.y = y;
+    this.range = myrange;
   }
 
 
@@ -53,6 +55,9 @@ class Fighter {
     return 1 + Math.floor(Math.random() * max);
   }
 
+  getRange(){
+    return this.range;
+  }
 
   /**
   * Check if the fighters is still alive
